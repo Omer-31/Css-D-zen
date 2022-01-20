@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation Website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">  
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      
+    </head>
+    <body>
+        <header id="header">
+            <a href="#" class="logo">Jungle</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+        
+            
+            <h2 id="text"><span>Animation design</span><br>Adventure</h2>
+            <img src="resım/bird1.png" id="bird1">
+            <img src="resım/bird2.png" id="bird2">
+            <img src="resım/forest.png" id="forest">
+            <a href="#" id="btn">Explore</a>
+            <img src="resım/rocks.png" id="rocks">
+            <img  src="resım/water.png" id="water">
+            
+        </section>
+        <div class="sec">
+            <h2>Hakkımızda</h2>
+            <p>Temelleri Kayseri'de atılan Bayraktarlar Şirketler Grubu'nda otomotivin daima önemli bir yeri olmuştur.
+            <br><br>Ticaret düzeyinde başlayan ilgi, dört kuşak boyunca giderek yoğunlaşarak sanayiciliğe kadar uzanmıştır.
+            <br><br>Kurucu Hacı Halil Bayraktar ile başlayan ve nakliyat-yedek parça işinde büyük gelişmeler kaydeden şirket, 1935 yılından itibaren ikinci kuşağın çabalarıyla büyümeye başlamıştır. Hacı Mehmet Bayraktar'ın katkılarıyla iş sahaları genişlemiş ve Bayraktarlar; bölgenin önde gelen ticari kuruluşlarından birisi haline gelmiştir.
+            <br><br>1953 yılında üçüncü kuşaktan İzzet Bayraktar; ailenin ithalatla tanışmasına öncülük etmiştir. Bu yeni süreçte, Kayseri'de kalmanın yeterli olamayacağı düşüncesiyle şirketin merkezi İstanbul'a kaydırılmış ve geçiş 1963 yılında tamamlanmıştır.
+            <br><br>Mercedes araçlarının yedek parçaları konusunda kısa zamanda söz sahibi olan Bayraktarlar, 70'li yılların başında Mercedes otobüslerinin Türkiye'de üretilmeye başlaması ile Mercedes araçlarının ana bayiliğini almıştır.
+            <br><br>İstanbul'da yaratılan yeni iş olanakları ile artan birikim, Bayraktarlar'ın önünde yeni ufukların açılmasıyla sonuçlanmıştır. Fransız CIBIE firmasından otomotiv aydınlatması ile ilgili mümessillik alınmıştır. 70'li yıllarda, Kayserili bir girişimci grubu ve Sabancı ailesi ile birlikte bir otomotiv lastiği projesi olan Lassa projesi ortaya çıkmış, Bayraktarlar Holding'in merkez binası inşa edilmiş ve Bayraktarlar Motorlu Vasıtalar A.Ş.'nin kurulması gerçekleşmiştir.
+            <br><br>Otomotiv alanında elde edilen birikim, grubu sanayicilik doğrultusunda motive etmiş, montaj düzeyinde otomotiv aydınlatması üretimine başlanmıştır. Grubun ilk sanayi tesisi Bayraktarlar Motorlu Vasıtalar Ticaret ve Sanayi A.Ş. 1979 yılında Bursa'da üretime başlamıştır. Daha sonra FARBA adını alan ve açıldığı yıllarda alanında ilk olan bu tesisle, ülke ekonomisine ve otomotiv sektörüne önemli katkılar sağlayacak sanayicilik süreci başlamıştır.</p>
+        </div>
+        
+
+        <script>
+            let text = document.getElementById('text');
+            let bird1 = document.getElementById('bird1');
+            let bird2 = document.getElementById('bird2');
+            let btn = document.getElementById('btn');
+            let rocks = document.getElementById('rocks');
+            let forest = document.getElementById('forest');
+            let water = document.getElementById('water');
+            let header = document.getElementById('header');
+
+            window.addEventListener('scroll',function(){
+                let value = window.scrollY;
+
+                text.style.top = 50+value * -0.5 + '%';
+                bird1.style.top = value * -1.5 + 'px';
+                bird1.style.left = value * 2 + 'px';
+                bird2.style.top = value * -1.5 + 'px';
+                bird2.style.left = value * -5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                rocks.style.top = value * -0.12 + 'px'; 
+                forest.style.top = value * 0.25 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
